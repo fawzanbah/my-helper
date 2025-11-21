@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify, Response
 
 app = Flask(__name__)
+@app.route("/ui")
+def ui():
+    return Response(html_ui, mimetype="text/html")
 
 # -------------------------------
 # FRONTEND UI (Upgraded v11)
